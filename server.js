@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import { connectDB } from "./config/db.js";
-import quotationRoutes from "./routes/quotationroutes.js";
+import quotationRoutes from "./routes/quotationRoutes.js";
 
 const app = express();
 
