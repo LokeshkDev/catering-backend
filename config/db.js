@@ -6,7 +6,6 @@ dotenv.config();
 
 export const connectDB = async () => {
   try {
-    // IMPORTANT: Render/Railway reads from Environment Variables (NOT .env)
     const mongoURI = process.env.MONGODB_URI;
 
     if (!mongoURI) {
