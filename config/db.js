@@ -1,11 +1,17 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+
+// Load .env only in local development
+dotenv.config();
 
 export const connectDB = async () => {
   try {
+    // IMPORTANT: Render/Railway reads from Environment Variables (NOT .env)
     const mongoURI = process.env.MONGODB_URI;
 
     if (!mongoURI) {
-      console.error("❌ ERROR: MONGODB_URI is missing in Render Environment Variables");
+      console.error("❌ ERROR: MONGODB_URI is missing.");
+      console.error("➡ Add it in Render → Environment Variables.");
       process.exit(1);
     }
 

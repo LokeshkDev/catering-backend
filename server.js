@@ -15,15 +15,12 @@ connectDB();
 // Routes
 app.use("/api/quotations", quotationRoutes);
 
-// Test Route
+// Root test route
 app.get("/", (req, res) => {
   res.send("Catering Backend API Running on Render 🚀");
 });
 
-// ------------------------------------------------------------
-// IMPORTANT: Render provides PORT via process.env.PORT
-// Never use a fixed port like 5000
-// ------------------------------------------------------------
+// Render uses dynamic port
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
