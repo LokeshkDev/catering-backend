@@ -5,7 +5,7 @@ export const connectDB = async () => {
     const mongoURI = process.env.MONGODB_URI;
 
     if (!mongoURI) {
-      console.error("❌ MONGODB_URI is missing in Railway Variables");
+      console.error("❌ ERROR: MONGODB_URI is missing in Render Environment Variables");
       process.exit(1);
     }
 
